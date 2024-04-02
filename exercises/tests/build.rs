@@ -15,6 +15,9 @@ fn main() {
         timestamp
     );
     println!("cargo:{}", your_command);
+    // In test7 
+    std::env::set_var("TEST_FOO", "1712052282");
+    println!("cargo:rustc-env:TEST_FOO=1712052282");
 
     // In tests8, we should enable "pass" feature to make the
     // testcase return early. Fill in the command to tell
